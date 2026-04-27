@@ -6,6 +6,5 @@ export async function getEvents() {
     .select("*")
 
   if (error) throw error;
-
   return data
 }
