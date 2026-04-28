@@ -8,7 +8,7 @@ export const TimeColumn: FC = () => {
         const hour = startHour + index;
 
         return (
-          <div className={`absolute right-3 -translate-y-1/2 text-xs text-slate-400 top-[${index * hourHeight}]`}
+          <div className={"absolute right-3 -translate-y-1/2 text-xs text-slate-400"}
                style={{top: index * hourHeight}}
                key={hour}
           >
