@@ -1,13 +1,13 @@
 import type {CalendarEventCardProps} from "../types";
 import {formatTime, getMinutesFromCalendarStart} from "@/components/Calendar/Utils";
-import {hourHeight, startHour} from "@/components/Calendar/constants";
+import {hourHeight, ONE_HOUR, startHour} from "@/components/Calendar/constants";
 
 const CalendarEventCard = ({event}: CalendarEventCardProps) => {
   const startMinutes = getMinutesFromCalendarStart(event.startDateTime, startHour);
   const endMinutes = getMinutesFromCalendarStart(event.endDateTime, startHour);
 
-  const top = (startMinutes / 60) * hourHeight;
-  const height = ((endMinutes - startMinutes) / 60) * hourHeight;
+  const top = (startMinutes / ONE_HOUR) * hourHeight;
+  const height = ((endMinutes - startMinutes) / ONE_HOUR) * hourHeight;
 
   return (
     <div

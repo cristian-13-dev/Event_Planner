@@ -6,3 +6,6 @@ export const totalHours = endHour - startHour;
 
 export const hourHeight = 96;
 export const bodyHeight = totalHours * hourHeight;
+
+export const ONE_MINUTE = 60_000;
+export const ONE_HOUR = 60;
